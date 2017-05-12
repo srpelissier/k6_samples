@@ -7,7 +7,7 @@ export let options = {
 };
 
 export default function() {
-    let res = http.get("http://asktheexpert.info");
+    let res = http.get("http://localhost:8001");
     check(res, {
         "status was 200": (r) => r.status == 200,
         "transaction time OK": (r) => r.timings.duration < 200
